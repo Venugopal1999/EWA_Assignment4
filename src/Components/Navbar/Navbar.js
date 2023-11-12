@@ -1,10 +1,24 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import logo from '../Assets/site/smart-home-icon.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { getTotalCartItems } from '../../Reducer/cartReducer';
+import { connect, useDispatch } from 'react-redux';
+import { AuthTypes } from '../../Reducer/authReducer';
 
-const Navbar = () => {
+const Navbar = (props) => {
     const[menu,setMenu]= useState("home");
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+
+    const handlelogout=()=>{
+      console.log("logout ",props.islogin.islogin);
+     dispatch({ type: AuthTypes.LOGOUT , islogin: !props.islogin.islogin});
+      console.log(props.islogin);
+      console.log('b');
+      navigate('/login');
+    };
   return (
     <div className='navbar'>
     <div className="nav-logo">
@@ -20,12 +34,25 @@ const Navbar = () => {
         <li onClick={()=>{setMenu("smartthermostat")}}> <Link style={{textDecoration: 'none'}} to ='/smartthermostat'>Smart Thermostat</Link>{menu==="smartthermostat"?<hr/>:<></>}</li>
     </ul>
     <div className="nav-login-cart">
-       <Link style={{textDecoration: 'none'}} to ='/login'> <button>Login</button></Link>
+    { props.islogin.islogin ? (
+          <button onClick={handlelogout}>Logout</button>
+        ) : (
+          <Link style={{ textDecoration: 'none' }} to='/login'>
+            <button>Login/SignUp</button>
+          </Link>
+        )}
         <Link style={{textDecoration: 'none'}} to ='/cart'> <p>Cart</p> </Link>
-        <div className="nav-cart-count">0</div>
+        <div className="nav-cart-count">{props.totalCartItems}</div>
     </div>
     </div>
   )
 }
 
-export default Navbar
+const mapStateToProps = (state) => {
+  return {
+    totalCartItems: getTotalCartItems(state.cart),
+    islogin: state.islogin, // Get total cart items from the Redux store
+  };
+};
+
+export default connect(mapStateToProps)(Navbar);

@@ -86,3 +86,9 @@
       width: 50%;
     }
   }
+  /* Add this to your CSS file */
+.error-message {
+  color: #ff0000; /* Set the text color to red */
+  margin-top: 10px; /* Add some top margin for spacing */
+  font-weight: bold; /* Make the text bold */
+}

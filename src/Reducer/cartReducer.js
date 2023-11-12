@@ -1,31 +1,3 @@
-// export const initialCartState = [];
-
-// export const CartTypes = {
-//   ADD: 'ADD',
-//   REMOVE: 'REMOVE',
-// };
-
-// const findItem = (cart, itemId) => cart.find((item) => item.itemId === itemId);
-
-// export const cartReducer = (state, action) => {
-//   switch (action.type) {
-//     case CartTypes.ADD:
-//       if (findItem(state, action.itemId)) {
-//         return state.map((item) => (item.itemId === action.itemId
-//           ? { ...item, quantity: item.quantity + 1 }
-//           : item));
-//       }
-//       console.log("venu");
-//       return [
-//         ...state,
-//         { itemId: action.itemId, quantity: 1 },
-//       ];
-//     case CartTypes.REMOVE:
-//       return state.filter((item) => item.itemId !== action.itemId);
-//     default:
-//       throw new Error(`Invalid action type ${action.type}`);
-//   }
-// };
 
 
 export const initialCartState = []; // Define your initial state
@@ -33,26 +5,41 @@ export const initialCartState = []; // Define your initial state
 export const CartTypes = {
   ADD: 'ADD',
   REMOVE: 'REMOVE',
+  CLEAR: 'CLEAR',
 };
 
-const findItem = (cart, itemId) => cart.find((item) => item.itemId === itemId);
+export const findItem = (cart, id) => cart.find((item) => item.id === id);
+
+export const getTotalCartItems = (cart) => {
+  let totalItems = 0;
+
+  for (const cartItem of cart) {
+    totalItems += cartItem.quantity;
+  }
+
+  return totalItems;
+};
 
 export const cartReducer = (state = initialCartState, action) => {
   switch (action.type) {
     case CartTypes.ADD:
-      if (findItem(state, action.itemId)) {
+      if (findItem(state, action.id)) {
+        console.log("venu11", action);
+        console.log("venu22", state)
         return state.map((item) =>
-          item.itemId === action.itemId
+          item.id === action.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       }
       return [
         ...state,
-        { itemId: action.itemId, quantity: 1 },
+        { id: action.id, quantity: 1 },
       ];
     case CartTypes.REMOVE:
-      return state.filter((item) => item.itemId !== action.itemId);
+      return state.filter((item) => item.id !== action.id);
+      case CartTypes.CLEAR:
+        return []; // Return an empty array to clear the cart
     default:
       return state; // Return the current state for unknown action types
   }

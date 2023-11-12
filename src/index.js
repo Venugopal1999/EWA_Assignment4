@@ -4,15 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ShopContextProvider from './Context/ShopContext';
-import store from './Store/Store';
+import {store, persistor} from './Store/Store';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
- <ShopContextProvider> 
+  <PersistGate loading={null} persistor={persistor}>
+  <ShopContextProvider> 
     <App />
     </ShopContextProvider>
+  </PersistGate>
 </Provider>
 
 );
@@ -21,3 +24,6 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+

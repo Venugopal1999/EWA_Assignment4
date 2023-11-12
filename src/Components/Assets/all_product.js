@@ -11,12 +11,34 @@ let all_product = [
       manufacturer: "Google",
       condition: "New",
       discount: 10.0,
-      accessories: {
-        accessory: [
-          "5 Pack Doorbell Removal Pin",
-          "Adapter Transformer Compatible"
-        ]
-      }
+      accessories: [
+        {
+          id: "Spare Parts for Ring Video Doorbell",
+            name: "Spare Parts for Ring Video Doorbell",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p36",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate",
+        },
+        {
+          id: "Ring wire spare",
+            name: "Ring wire spare",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate"
+        }
+      ]
     },
     {
       id: "Google Nest Doorbell",
@@ -27,12 +49,34 @@ let all_product = [
       manufacturer: "Google",
       condition: "New",
       discount: 10.0,
-      accessories: {
-        accessory: [
-          "Arlo Wired Smart Video Doorbell",
-          "Cabel Doorbell Transformer"
-        ]
-      }
+      accessories: [
+        {
+          id: "Spare Parts for Ring Video Doorbell",
+            name: "Spare Parts for Ring Video Doorbell",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p36",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate",
+        },
+        {
+          id: "Ring wire spare",
+            name: "Ring wire spare",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p35",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate"
+        }
+      ]
     },
     {
       id: "Google Nest x Yale Lock",
@@ -43,13 +87,34 @@ let all_product = [
       manufacturer: "Google",
       condition: "New",
       discount: 10.0,
-      accessories: {
-        accessory: [
-          "charger",
-          "Doorbell Camera Angle Mount",
-          "Doorbell Removal Pin Release Key"
-        ]
-      }
+      accessories: [
+        {
+          id: "Spare Parts for Ring Video Doorbell",
+            name: "Spare Parts for Ring Video Doorbell",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p36",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate",
+        },
+        {
+          id: "Ring wire spare",
+            name: "Ring wire spare",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p35",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate"
+        }
+      ]
     },
     {
       id: "Lorex Wifi Video Doorbell",
@@ -60,11 +125,34 @@ let all_product = [
       manufacturer: "Lorex",
       condition: "New",
       discount: 10.0,
-      accessories: {
-        accessory: [
-          "Wireless Doorbells for Home Compatible"
-        ]
-      }
+      accessories: [
+        {
+          id: "Spare Parts for Ring Video Doorbell",
+            name: "Spare Parts for Ring Video Doorbell",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p36",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate",
+        },
+        {
+          id: "Ring wire spare",
+            name: "Ring wire spare",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p35",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate"
+        }
+      ]
     },
     {
       id: "Lorex Wired Video Doorbell",
@@ -75,11 +163,34 @@ let all_product = [
       manufacturer: "Lorex",
       condition: "New",
       discount: 10.0,
-      accessories: {
-        accessory: [
-          "Extension Cable Video Doorbell"
-        ]
-      }
+      accessories: [
+        {
+          id: "Spare Parts for Ring Video Doorbell",
+            name: "Spare Parts for Ring Video Doorbell",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p36",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate",
+        },
+        {
+          id: "Ring wire spare",
+            name: "Ring wire spare",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p35",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate"
+        }
+      ]
     },
     {
       id: "Ring Video Doorbell Plus",
@@ -90,11 +201,34 @@ let all_product = [
       manufacturer: "Ring",
       condition: "New",
       discount: 10.0,
-      accessories: {
-        accessory: [
-          "Power Adapter for Video Doorbell"
-        ]
-      }
+      accessories: [
+        {
+          id: "Spare Parts for Ring Video Doorbell",
+            name: "Spare Parts for Ring Video Doorbell",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p36",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate",
+        },
+        {
+          id: "Ring wire spare",
+            name: "Ring wire spare",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p35",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate"
+        }
+      ]
     },
     {
       id: "Ring Video Doorbell",
@@ -105,11 +239,34 @@ let all_product = [
       manufacturer: "Ring",
       condition: "New",
       discount: 10.0,
-      accessories: {
-        accessory: [
-          "Siding Nailer Adapter Kit"
-        ]
-      }
+      accessories: [
+        {
+          id: "Spare Parts for Ring Video Doorbell",
+            name: "Spare Parts for Ring Video Doorbell",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p36",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate",
+        },
+        {
+          id: "Ring wire spare",
+            name: "Ring wire spare",
+            price: 9.99,
+            manufacturer: "Ring",
+            category: "accessory",
+            image: "p35",
+            description: "Good doorbell product",
+            condition: "New",
+            discount: "2%",
+            warranty: "2 Yr warranty",
+            rebate: "5% rebate"
+        }
+      ]
     },
     {
       id: "GE Lighting CYNC Smart LED Light Bulbs",
